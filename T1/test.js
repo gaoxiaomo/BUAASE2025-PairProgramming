@@ -1,7 +1,7 @@
 import assert from "assert";
 
 // Choose proper "import" depending on your PL.
-// import { greedy_snake_move } from "./t1-as/build/release.js";
+import { greedy_snake_move } from "./t1-as/build/release.js";
 // import { greedy_snake_move } from "./t1_rust/pkg/t1_rust.js";
 // [Write your own "import" for other PLs.]
 
@@ -47,5 +47,4 @@ assert.strictEqual(greedy_snake_fn_checker([4,4,4,5,4,6,4,7], [1,1], greedy_snak
 assert.strictEqual(greedy_snake_fn_checker([1,1,1,2,1,3,1,4], [1,5], greedy_snake_move) >= 0, true);
 assert.strictEqual(greedy_snake_fn_checker([1,1,1,2,2,2,2,1], [1,5], greedy_snake_move) >= 0, true);
 assert.strictEqual(greedy_snake_fn_checker([1,1,2,1,2,2,1,2], [1,5], greedy_snake_move) >= 0, true);
-
 console.log("🎉 You have passed all the tests provided.");
