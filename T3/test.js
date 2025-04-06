@@ -1,9 +1,9 @@
 // Import game engine
-import { 
-  initializeGameState, 
-  processGameTurn, 
-  isGameOver, 
-  getFinalResults 
+import {
+  initializeGameState,
+  processGameTurn,
+  isGameOver,
+  getFinalResults
 } from './snake-engine.js';
 
 // Import configuration
@@ -24,18 +24,18 @@ console.log(`Starting ${TEST_MODE} mode with ${gameState.snake_num} snakes, boar
 console.log(`Game seed: 0x${gameState.seed.toString(16).padStart(16, '0')}`)
 
 while (!isGameOver(gameState)) {
-  
+
   try {
     // Process one turn and get any messages
     const { gameState: newGameState, messages } = processGameTurn(gameState);
     gameState = newGameState;
-    
+
     // Display any warnings or errors
     if (messages && messages.warnings.length > 0) {
       console.warn("Warnings in this turn:");
       messages.warnings.forEach(warning => console.warn(`- ${warning}`));
     }
-    
+
     if (messages && messages.errors.length > 0) {
       console.error("Errors in this turn:");
       messages.errors.forEach(error => console.error(`- ${error}`));

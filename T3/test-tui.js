@@ -1,4 +1,3 @@
-
 // Import game engine
 import {
   initializeGameState,
@@ -383,3 +382,5 @@ function stopAutoPlay() {
 // Initial render
 renderBoard();
 updateInfo('Press SPACE to start');
+
+
